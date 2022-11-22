@@ -3,24 +3,23 @@ function createPhoneNumber(numbers){
     let string ="("
 
     for (let i = 0; i < 3; i++){
-        string = string + numbers[i];
+        string += numbers[i];
     }
 
-    string = string + ")"
+    string = string + ") "
 
     for (let i = 3; i < 6; i++){
-        string = string + numbers[i];
+        string += numbers[i];
     }
 
     string = string + "-"
-
     for (let i = 6; i < numbers.length; i++){
-        string = string + numbers[i];
+        string += numbers[i];
     }
 
     console.log(string)
-    return string
-
+    return (string)
 }
 
-// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) returns "(123) 456-7890"
+createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) 
+// returns "(123) 456-7890"
